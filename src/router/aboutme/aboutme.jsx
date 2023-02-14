@@ -1,6 +1,6 @@
 import profile from "../../assets/img/profile2.png";
 import { StyledAboutme } from "../aboutme/styles";
-import { useState } from "react";
+
 import Button from "../../components/button/button";
 
 export default function AboutMe() {
