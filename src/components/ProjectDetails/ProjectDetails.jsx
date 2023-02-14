@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { detailsProjects } from "../utils/bd";
 import { StyledDetails } from "./styles";
-import Button from "../button/button";
+import imgMovie from "../../assets/img/appTask.png";
 
 function getProject() {
   const { idProject } = useParams();
@@ -15,7 +15,7 @@ export default function ProjectDetails() {
     <StyledDetails>
       <div className="container">
         <div className="container--left">
-          <img src={project.img} alt={`img ${project.name}`} />
+          <img src={imgMovie} alt={`img ${project.name}`} />
         </div>
 
         <div className="container--right">
