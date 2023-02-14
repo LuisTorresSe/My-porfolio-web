@@ -1,10 +1,14 @@
+import appmovie from "../../assets/img/appMovie.png";
+import apptask from "../../assets/img/appTask.png";
+import webSite from "../../assets/img/webPorfolio.png";
+
 export const detailsProjects = [
   {
     id: 1,
     name: "Web portfolio",
     tools: ["ReactJs", "Styled components", "React router"],
     description: "Este es mi porfolio Web",
-    img: "../../assets/img/webPorfolio.png",
+    img: webSite,
     repository: "url",
     webSite: "url",
   },
@@ -13,7 +17,7 @@ export const detailsProjects = [
     name: "Movie app",
     tools: ["ReactJs", "Css modules", "React router"],
     description: "Una aplicación que muestra todas las peliculas en tensión",
-    img: "../../assets/img/appMovie.png",
+    img: appmovie,
     repository: "https://github.com/LuisTorresSe/app-movies",
     webSite: "https://luis-movies.netlify.app/",
   },
@@ -22,7 +26,7 @@ export const detailsProjects = [
     name: "Task app ",
     tools: ["ReactJs", "Css modules", "Typescript"],
     description: "Esta es una aplicación que nos ayuda a organizarnos",
-    img: "../../assets/img/appTask.png",
+    img: apptask,
     repository: "https://github.com/LuisTorresSe/task-app",
     webSite: "https://task-app-torres.netlify.app/",
   },

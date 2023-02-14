@@ -15,7 +15,7 @@ export default function ProjectDetails() {
     <StyledDetails>
       <div className="container">
         <div className="container--left">
-          <img src={imgMovie} alt={`img ${project.name}`} />
+          <img src={project.img} alt={`img ${project.name}`} />
         </div>
 
         <div className="container--right">
