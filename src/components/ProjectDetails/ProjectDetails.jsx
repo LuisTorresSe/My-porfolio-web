@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { detailsProjects } from "../utils/bd";
 import { StyledDetails } from "./styles";
-import imgMovie from "../../assets/img/appTask.png";
 
 function getProject() {
   const { idProject } = useParams();

@@ -1,6 +1,6 @@
 import { LinkNav } from "./linkNav";
 import { StyledNav } from "./styles";
-import { list } from "../utils/bd";
+import { list } from "../../utils/bd.js";
 import Button from "../button/button";
 
 export default function Nav({ hamburgerMenu }) {
