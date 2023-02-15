@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { StyledProject } from "./styles";
-import { detailsProjects } from "../../components/utils/bd";
+import { detailsProjects } from "../../utils/bd.js";
 import Button from "../../components/button/button";
 
 export default function Projects() {

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { detailsProjects } from "../utils/bd";
+import { detailsProjects } from "../../utils/bd.js";
 import { StyledDetails } from "./styles";
 
 function getProject() {
