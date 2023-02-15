@@ -3,6 +3,7 @@ import { StyledContact, StyledForm } from "./styles";
 import { useState } from "react";
 import Button from "../../components/button/button";
 import { Icon } from "@iconify/react";
+import { postInbox } from "../../service/serviceInbox";
 
 export async function action({ request, params }) {
   return redirect(`nav/contact/send`);
@@ -10,14 +11,31 @@ export async function action({ request, params }) {
 
 export default function Contact() {
   const [visible, setVisible] = useState(false);
-  const [inputValues, setInputValues] = useState({});
+  const [inputValues, setInputValues] = useState({
+    name: "",
+    telf: "",
+    email: "",
+    description: "",
+  });
 
+  console.log(inputValues);
   const handleSubmit = (e) => {
     handleVisible();
+
+    try {
+      const response = postInbox(inputValues);
+      console.log(response);
+    } catch (error) {
+      console.error(error.message);
+    }
   };
 
   const handleVisible = () => {
     setVisible(!visible);
+  };
+
+  const handleChangeInput = (e) => {
+    setInputValues({ ...inputValues, [e.target.name]: e.target.value });
   };
 
   return (
@@ -27,26 +45,46 @@ export default function Contact() {
       <StyledForm onSubmit={handleSubmit} method="post">
         <div>
           <label htmlFor="name">Nombre</label>
-          <input type="text" id="name" />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            onChange={handleChangeInput}
+          />
         </div>
 
         <div>
           <label htmlFor="telf">Celular</label>
-          <input type="tel" id="telf" />
+          <input
+            type="tel"
+            id="telf"
+            name="telf"
+            onChange={handleChangeInput}
+          />
         </div>
 
         <div>
           <label htmlFor="email">Correo</label>
-          <input type="email" id="email" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            onChange={handleChangeInput}
+          />
         </div>
 
         <div>
-          <label htmlFor="description">Descripcion</label>
+          <label htmlFor="description" required>
+            Descripcion
+          </label>
           <textarea
             name="description"
             id="description"
             cols="30"
             rows="10"
+            onChange={handleChangeInput}
           ></textarea>
         </div>
 

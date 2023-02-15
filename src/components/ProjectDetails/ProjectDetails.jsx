@@ -19,7 +19,6 @@ export default function ProjectDetails() {
 
         <div className="container--right">
           <h1>{project.name}</h1>
-          <p>{project.description}</p>
 
           <div className="container--tools">
             <h3>Herramientas</h3>

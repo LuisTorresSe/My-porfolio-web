@@ -11,10 +11,12 @@ export const StyledProject = styled.div`
 
   h2 {
     font-size: 3rem;
+    margin: 21px;
   }
 
   .container-projects {
     width: 80%;
+    height: 90vh;
     display: flex;
     gap: 3em;
     align-items: center;
@@ -56,10 +58,22 @@ export const StyledProject = styled.div`
   .footer {
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 0;
     gap: 1em;
     width: 100%;
     span {
       font-size: 0.9em;
+    }
+  }
+
+  @media (max-width: 870px) {
+    .container-projects {
+      height: auto;
+    }
+    .footer {
+      position: relative;
+      padding-bottom: 1em;
     }
   }
 `;

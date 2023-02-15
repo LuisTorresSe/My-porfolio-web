@@ -4,7 +4,7 @@ import { Link as LinkRouter } from "react-router-dom";
 export const StyledNav = styled.div`
   & {
     width: 100%;
-    height:100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     place-content: center;
@@ -36,15 +36,23 @@ export const StyledNav = styled.div`
     align-items: center;
     text-align: center;
     margin-top: 1em;
+    flex-direction: column;
+    gap: 1em;
+    .container-networks {
+      display: flex;
+      gap: 1em;
+      width: 100vw;
+      justify-content: space-evenly;
+    }
+    span > * {
+      font-size: 3em;
+    }
   }
 
   @media (max-width: 560px) {
-    &{
+    & {
       height: auto;
     }
-
-
-
     .container-links {
       margin-top: 1em;
       grid-template-columns: repeat(1, 1fr);
