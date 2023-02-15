@@ -13,7 +13,8 @@ export const StyledHome = styled.div`
     .img-logo {
       position: absolute;
       top: 2em;
-      left: 0;
+      padding-left: 3em;
+      left:0;
       img {
         width: 90px;
         height: 100px;
