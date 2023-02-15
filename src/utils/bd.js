@@ -1,6 +1,6 @@
-import appmovie from "../../assets/img/appMovie.png";
-import apptask from "../../assets/img/appTask.png";
-import webSite from "../../assets/img/webPorfolio.png";
+import appmovie from "../assets/img/movie.png";
+import apptask from "../assets/img/task.png";
+import webSite from "../assets/img/porfolio.png";
 
 export const detailsProjects = [
   {
